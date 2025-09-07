@@ -36,3 +36,69 @@ if (form) {
     form.reset(); // limpia el formulario después de enviar
   });
 }
+
+// ====== YOUTUBE PLAYER (Máxima calidad y evitar reproducción simultánea) ======
+const ytScript = document.createElement('script');
+ytScript.src = "https://www.youtube.com/iframe_api";
+document.head.appendChild(ytScript);
+
+let players = [];
+
+function onYouTubeIframeAPIReady() {
+  // Video 1 (NOT)
+  players.push(new YT.Player('player1', {
+    height: '450',
+    width: '800',
+    videoId: 'qv7xmCNmTSs',
+    events: {
+      'onReady': onPlayerReady,
+      'onStateChange': onPlayerStateChange
+    }
+  }));
+
+  // Video 2 (AND)
+  players.push(new YT.Player('player2', {
+    height: '450',
+    width: '800',
+    videoId: '7F2b0maYkCY',
+    events: {
+      'onReady': onPlayerReady,
+      'onStateChange': onPlayerStateChange
+    }
+  }));
+  // Video 3
+  players.push(new YT.Player('player3', {
+    height: '450',
+    width: '800',
+    videoId: 'nj2Xw3EyQR0',
+    events: {
+      'onReady': onPlayerReady,
+      'onStateChange': onPlayerStateChange
+    }
+  }));
+  // Video 4
+  players.push(new YT.Player('player4', {
+    height: '450',
+    width: '800',
+    videoId: 'y4JQsavTR4Q',
+    events: {
+      'onReady': onPlayerReady,
+      'onStateChange': onPlayerStateChange
+    }
+  }));
+}
+
+function onPlayerReady(event) {
+  event.target.setPlaybackQuality('highres'); // Forzar calidad máxima
+}
+
+function onPlayerStateChange(event) {
+  if (event.data === YT.PlayerState.PLAYING) {
+    // Pausar todos los demás players
+    players.forEach(p => {
+      if (p !== event.target) {
+        p.pauseVideo();
+      }
+    });
+  }
+}
