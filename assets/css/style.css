@@ -551,6 +551,96 @@ header {
   height: 100%;
   border: none;
 }
+/* ===== SHOWCASE DE PROYECTOS ===== */
+.project-showcase {
+  padding: 4rem 2rem;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.project-showcase h2 {
+  font-size: 2rem;
+  color: #0a2a66;
+  margin-bottom: 0.8rem;
+  text-align: center;
+}
+
+.project-showcase .project-desc {
+  max-width: 800px;
+  margin: 0 auto 2.5rem;
+  font-size: 1.1rem;
+  text-align: center;
+  color: #444;
+  line-height: 1.7;
+}
+
+/* Galería de capturas */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.gallery-item {
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.gallery-item img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 0.8rem;
+}
+
+.gallery-item p {
+  font-size: 0.95rem;
+  color: #555;
+  text-align: justify;
+}
+
+/* Video destacado */
+.project-showcase .video-frame {
+  position: relative;
+  width: 100%;
+  max-width: 950px;
+  margin: 0 auto;
+  padding-top: 56.25%; /* 16:9 */
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  background: #000;
+}
+
+.project-showcase .video-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.project-layout {
+  display: flex;
+  flex-direction: column; /* primero el video, luego texto+galería */
+  align-items: center;
+  gap: 2rem; /* <<< espacio entre video y descripción */
+}
+
+.project-info {
+  max-width: 950px;
+  width: 100%;
+  margin: 0 auto;
+}
 
 /* FOOTER */
 footer {

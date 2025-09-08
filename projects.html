@@ -9,56 +9,139 @@
 </head>
 <body>
 
-  <!-- HEADER estilo ventana -->
+  <!-- HEADER -->
   <header>
     <div class="header-left">
-      <!-- Botones estilo ventana macOS -->
       <div class="header-dots">
         <span class="red"></span>
         <span class="yellow"></span>
         <span class="green"></span>
       </div>
-      <!-- Nombre de la marca -->
       <div class="logo">DYWOX</div>
     </div>
 
-    <!-- Botón hamburguesa -->
     <div class="hamburger" id="hamburger">
       <span></span>
       <span></span>
       <span></span>
     </div>
 
-    <!-- Menú de navegación -->
     <ul class="nav-links" id="nav-links">
       <li><a href="index.html">Inicio</a></li>
       <li><a href="about.html">Quiénes somos</a></li>
-      <li><a href="projects.html">Proyectos</a></li>
+      <li><a href="projects.html" class="active">Proyectos</a></li>
       <li><a href="blog.html">Blog</a></li>
       <li><a href="contact.html">Contacto</a></li>
     </ul>
   </header>
 
-
-  <!-- CONTENIDO PROYECTOS -->
+  <!-- HERO -->
   <section class="hero projects">
     <div class="hero-content">
       <h1>Proyectos DYWOX</h1>
-      <p>Descubre los proyectos que hemos desarrollado en programación, desarrollo web e inteligencia artificial.</p>
+      <p>Explora en detalle algunos de nuestros proyectos más importantes: descripción, capturas de pantalla, código y videos en acción.</p>
     </div>
   </section>
 
+  <!-- PROYECTO 1 -->
+  <section class="project-showcase">
+    <h2>Sistema de gestión veterinaria</h2>
+    <div class="project-layout">
+      <!-- Video -->
+      <div class="video-frame">
+        <iframe src="https://www.youtube.com/embed/nj2Xw3EyQR0" allowfullscreen></iframe>
+      </div>
 
-  <section class="about-preview">
-    <h2>Nuestros proyectos destacados</h2>
-    <p>Aquí puedes mostrar imágenes, descripciones y enlaces de tus trabajos más importantes.</p>
+      <!-- Texto + Galería -->
+      <div class="project-info">
+        <p class="project-desc">
+          Proyecto realizado en C++, implementado en equipo con enfoque en el ciclo CRUD. 
+          Ofrece un menú principal con 6 opciones para gestionar citas, pacientes, dueños, 
+          inventario, reportes y configuración. Se destaca el uso de estructuras eficientes 
+          y una interfaz de texto clara y funcional.
+        </p>
+
+        <div class="gallery">
+          <div class="gallery-item">
+            <img src="assets/img/menu-veterinaria.png" alt="Menú principal">
+            <p>Menú principal con opciones de gestión: citas, pacientes, dueños, inventario, reportes y ajustes.</p>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/img/vet_citas.png" alt="Gestión de citas">
+            <p>Pantalla para crear, buscar, actualizar y eliminar citas veterinarias.</p>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/img/crud-veterinaria.png" alt="Código C++">
+            <p>Fragmento de código en C++ mostrando funciones CRUD para manejar pacientes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROYECTO 2 -->
+  <section class="project-showcase">
+    <h2>Dashboard con IA</h2>
+    <div class="project-layout">
+      <!-- Video -->
+      <div class="video-frame">
+        <iframe src="https://www.youtube.com/embed/tuIDdeVideo2" allowfullscreen></iframe>
+      </div>
+
+      <!-- Texto + Galería -->
+      <div class="project-info">
+        <p class="project-desc">
+          Un panel interactivo desarrollado en Python y Pandas que analiza datos empresariales y genera reportes automáticos.
+        </p>
+
+        <div class="gallery">
+          <div class="gallery-item">
+            <img src="assets/img/dashboard_data.png" alt="Carga de datos">
+            <p>Carga automática de datos desde Excel y CSV.</p>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/img/dashboard_grafico.png" alt="Gráfico">
+            <p>Visualización de tendencias con gráficas interactivas.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROYECTO 3 -->
+  <section class="project-showcase">
+    <h2>Pizarra Interactiva</h2>
+    <div class="project-layout">
+      <!-- Video -->
+      <div class="video-frame">
+        <iframe src="https://www.youtube.com/embed/tuIDdeVideo3" allowfullscreen></iframe>
+      </div>
+
+      <!-- Texto + Galería -->
+      <div class="project-info">
+        <p class="project-desc">
+          Una pizarra en tiempo real construida con PyQt5, con pestañas dinámicas y exportación a PDF e imágenes.
+        </p>
+
+        <div class="gallery">
+          <div class="gallery-item">
+            <img src="assets/img/pizarra_ui.png" alt="Interfaz de la pizarra">
+            <p>Interfaz gráfica con pestañas dinámicas tipo “hojas”.</p>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/img/pizarra_pdf.png" alt="Exportación a PDF">
+            <p>Ejemplo de exportación de un dibujo a PDF.</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- FOOTER -->
   <footer>
     <p>© 2025 DYWOX - Todos los derechos reservados</p>
   </footer>
-  <script src="assets/js/script.js"></script>
 
+  <script src="assets/js/script.js"></script>
 </body>
 </html>
